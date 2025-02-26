@@ -31,7 +31,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Zeabur
 
-This project is configured to deploy automatically to [Zeabur](https://zeabur.com) using GitHub Actions. Every push to the master branch will trigger a new deployment.
+This project is configured to deploy automatically to [Zeabur](https://zeabur.com) using GitHub Actions. Every push to the main branch will trigger a new deployment.
 
 The deployment workflow:
 1. Builds the Next.js application
