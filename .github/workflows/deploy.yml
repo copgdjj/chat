@@ -26,7 +26,7 @@ jobs:
         CI: true
         
     - name: Deploy to Zeabur
-      uses: zeabur/action-deploy@v1
+      uses: zeabur/deploy-to-zeabur@v1
       with:
         token: ${{ secrets.ZEABUR_TOKEN }}
         project: chat
