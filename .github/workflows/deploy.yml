@@ -1,9 +1,9 @@
 name: Deploy to Zeabur
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   deploy:
@@ -29,5 +29,5 @@ jobs:
       uses: zeabur/setup-zeabur@v1
       with:
         token: ${{ secrets.ZEABUR_TOKEN }}
-        project: tst1
+        project: chat
         service: web
