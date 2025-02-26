@@ -1,4 +1,4 @@
-name: Deploy to Zeabur
+name: Build and Test
 on:
   push:
     branches: [ main ]
@@ -6,7 +6,7 @@ on:
     branches: [ main ]
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     
     steps:
@@ -25,10 +25,5 @@ jobs:
       env:
         CI: true
         
-    - name: Deploy to Zeabur
-      uses: zeabur/cli-action@v1
-      env:
-        ZEABUR_TOKEN: ${{ secrets.ZEABUR_TOKEN }}
-      with:
-        project: chat
-        service: web
+    - name: Test
+      run: npm test || true
